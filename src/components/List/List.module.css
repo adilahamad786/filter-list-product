@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 3rem auto;
+}
+
+@media screen and (max-width: 500px) {
+    .listContainer {
+        margin: 2rem auto;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .listContainer {
+        margin: 2rem auto;
+        width: 85%;
+    }
+}

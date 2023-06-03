@@ -1,0 +1,96 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: rgb(58, 58, 189);
+    padding: 1rem 3rem;
+    position: fixed;
+    top: 0rem;
+    width: 100%;
+    color: whitesmoke;
+    text-transform: uppercase;
+    height: 4rem;
+    z-index: 99;
+}
+
+.logo {
+    text-decoration: none;
+    color: yellow;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+.checked, .unchecked {
+    cursor: pointer;
+    display: none;
+}
+
+.navList {
+    display: flex;
+    list-style-type: none;
+    gap: 5rem;
+}
+
+.navItem:hover {
+    color: yellow;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+    .navList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        position: fixed;
+        top: 4rem;
+        left: 0rem;
+        background-color: rgb(56, 56, 221);
+        width: 100%;
+        height: 0vh;
+        transition: all 0.3s;
+    }
+
+    .checked {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .unchecked {
+        display: none;
+        font-size: 2rem;
+    }
+
+    .navItem {
+        display: block;
+        text-align: center;
+        margin: 1rem;
+        padding: 0.5rem 1.5rem;
+        visibility: hidden;
+    }
+
+    #check:checked ~ .checked {
+        display: none;
+    }
+
+    #check:checked ~ .unchecked {
+        display: block;
+    }
+
+    #check:checked ~ ul {
+        height: 100vh;
+        padding: 2rem;
+    }
+
+    #check:checked ~ ul li {
+        visibility: visible;
+        font-size: 1.2rem;
+    }
+}
